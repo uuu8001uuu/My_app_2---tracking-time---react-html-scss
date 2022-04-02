@@ -1,0 +1,301 @@
+@import "../app/vars";
+
+.mainMenu {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 75%;
+    max-width: 500px;
+    height: 100%;
+    background-color: #4293f2;
+    font-size: 32px;
+    border-radius: 0 35px 35px 0;
+    z-index: 100;
+    overflow: hidden;
+    overflow: visible;
+    position: fixed;
+
+    
+    
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+        color: #efffff;
+
+        @media ($mobile) {
+            font-size: 27px;
+            font-weight: 700;
+        }
+    }
+    
+    &-content {
+        position: absolute;
+        width: 100%;
+        max-width: 500px;
+        height: 90%;
+        bottom: 0px;
+        background-color: white;
+        color: black;
+        border-radius: 35px 35px 35px 0;
+        box-shadow: 0px -5px 8px 3px rgba(0, 0, 0, 0.3);
+        
+        &__navigation {
+            display: flex;
+            padding: 35px 0 0 25px;
+
+            &:first-child {
+                padding: 35px 0 0 25px;
+
+                @media ($laptop_s) {
+                    padding: 35px 0 0 25px;
+                }
+            }
+
+            @media ($laptop_s) {
+                padding: 15px 0 0 25px;
+            }
+
+            
+
+            &-link {
+                display: flex;
+                cursor: pointer;
+            }
+
+            &-image {
+                margin-right: 15px;
+                width: 38px;
+                
+
+                @media ($mobile) {
+                    width: 28px;
+                }
+            }
+
+            &-text {
+                @media (laptop_s) {
+                    font-size: 25px;
+                }
+
+                @media ($tablet_l) {
+                    font-size: 25px;
+                }
+
+                @media ($mobile) {
+                    font-size: 17px;
+                }
+
+                &:hover {
+                    color: #4293f2;
+                }
+            }
+            
+        }
+    }
+
+    &-setting {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(180deg, #7da3e7 0%, #fc97b6 99%);
+        box-shadow: none;
+        width: 100%;
+        height: 0%;
+        max-width: 500px;
+        color: black;
+        border-radius: 35px 35px 35px 0;
+        transition: 0.3s;
+    }
+
+    &-setting.activeSetting {
+        height: 60%;
+        transition: 0.5s;
+        box-shadow: 0px -5px 8px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    &-contacts {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(180deg, #7da3e7 0%, #fc97b6 99%);
+        box-shadow: none;
+        width: 100%;
+        height: 0%;
+        max-width: 500px;
+        color: black;
+        border-radius: 35px 35px 35px 0;
+        transition: 0.3s;
+
+        &__content {
+            margin: 30px 25px 0 25px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #efffff;
+            cursor: default;
+
+            @media ($laptop_s) {
+                font-size: 25px;
+            }
+            @media ($mobile) {
+                font-size: 20px;
+            }
+            
+            &-text{
+                margin-top: 30px;
+                padding: 0 25px;
+                text-align: center;
+                
+            }
+
+            
+            div:nth-child(2) { // Select button instagram
+                background: linear-gradient(90deg, #fbb75b 0%, #a436af 99%);
+
+                &:hover {
+                    background: linear-gradient(90deg, darken($color: #fbb75b, $amount: 7%) 0%, darken($color: #a436af, $amount: 7%) 99%);
+                }
+            }
+
+            &-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 25px 0;
+                padding: 15px 0;
+                background-color: #26d6a5;
+                border-radius: 10px;
+                width: 100%;
+
+                &:hover {
+                    background-color: darken($color: #26d6a5, $amount: 7%)
+                }
+
+                
+                img {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    padding-right: 25px;
+                }
+
+                span {
+                }
+            }
+        }
+
+    }
+
+    &-contacts.activeСontacts {
+        height: 60%;
+        transition: 0.5s;
+        box-shadow: 0px -5px 8px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    &-aboutApp {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(180deg, #7da3e7 0%, #fc97b6 99%);
+        box-shadow: none;
+        width: 100%;
+        height: 0%;
+        max-width: 500px;
+        color: black;
+        border-radius: 35px 35px 35px 0;
+        transition: 0.3s;
+
+        &__content {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: default;
+
+            &-image {
+                width: 100px;
+                cursor: default;
+
+                @media ($laptop_s) {
+                    width: 60px;
+                }
+            }
+
+            &-text {
+                margin-top: 30px;
+                padding: 0 25px;
+                color: #efffff;
+                text-align: center;
+                cursor: default;
+
+                @media ($laptop_s) {
+                    font-size: 25px;
+                }
+                @media ($mobile) {
+                    font-size: 20px;
+                }
+            }
+
+            &-vesion {
+                margin-top: 30px;
+                color: lighten($color: #4293f2, $amount: 20%);
+                cursor: default;
+
+                @media ($laptop_s) {
+                    font-size: 20px;
+                }
+                @media ($mobile) {
+                    font-size: 16px;
+                }
+            }
+
+            &-developer {
+                position: absolute;
+                bottom: 20px;
+                color: #efffff;
+                cursor: default;
+
+                @media ($laptop_s) {
+                    font-size: 25px;
+                }
+                @media ($mobile) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+    &-aboutApp.activeAboutApp {
+        height: 60%;
+        transition-delay: 1.2s;
+        transition-property: height;
+        transition: 0.5s;
+        box-shadow: 0px -5px 8px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    
+}
+
+.darkArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 65%;
+    transition: 1.0s;
+    cursor: pointer;
+    position: fixed;
+    
+
+
+    &:hover {
+        opacity: 45%;
+        transition: 1.0s;
+    }
+}
