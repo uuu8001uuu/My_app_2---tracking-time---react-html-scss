@@ -1,0 +1,284 @@
+@import "../app/vars";
+
+.tracking {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 20px 25px 20px;
+
+    @media ($mobile) {
+      margin: 0 15px 15px 15px;
+    }
+
+    &:hover &-left__image {
+      max-height: 82px;
+      max-width: 82px;
+      margin: auto 14.015px;
+      transition: all 0.5s ease-in-out;
+
+      @media ($tablet_l) {
+        max-height: 50px;
+        max-width: 50px;  
+        margin: auto 10px;
+      }
+
+      @media ($mobile) {
+        max-height: 30px;
+        max-width: 30px;  
+        margin: auto 10px;
+      }
+      }
+
+      
+    &-left {
+      display: flex;
+      flex-direction: row;
+  
+  
+      &__image {
+        max-height: 70px;
+        max-width: 70px;
+        margin: auto 20px;
+        transition: all 0.5s ease-in-out;
+
+        @media ($tablet_l) {
+          max-height: 50px;
+          max-width: 50px;
+          margin: auto 10px;
+        }
+        
+        @media ($mobile) {
+          max-height: 30px;
+          max-width: 30px;
+          margin: auto 10px;
+        }
+      }
+  
+      &__info{
+        
+        &-title {
+          font-size: 30px;
+          margin: 20px 0 0 0;
+          cursor: default;
+
+          // For overflow text outside of a block
+          max-width: 380px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; 
+
+          @media ($tablet_l) {
+            max-width: 48vw;
+          }
+
+          @media ($tablet_m) {
+            max-width: 41vw;
+            font-size: 22px;
+          }
+
+          @media ($tablet_s) {
+            max-width: 42vw;
+            font-size: 22px;
+          }
+
+          @media ($mobile) {
+            max-width: 50vw;
+            font-size: 22px;
+          }
+
+          @media ($mobile_m) {
+            max-width: 45vw;
+            font-size: 16px;
+          }
+
+          @media ($mobile_s) {
+            max-width: 40vw;
+            font-size: 16px;
+          }
+
+          @media ($mobile_fold) {
+            max-width: 35vw;
+            font-size: 16px;
+          }
+        }
+        
+        &-time {
+          font-size: 25px;
+          color: #38b3cd;
+          margin-top: 0;
+          cursor: default;
+          
+          @media ($mobile) {
+            margin-top: 2px;
+            font-size: 16px;
+          }
+        }
+      }
+  
+    }
+  
+    &-right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &__edit {
+        
+        &-image {
+          width: 32px;
+          cursor: pointer;
+          margin-left: 15px;
+          margin-top: 0;
+
+          @media ($tablet_s) {
+            width: 20px;
+            margin-top: 25px;
+            margin-right: 15px;
+          }
+
+          @media ($mobile) {
+            width: 20px;
+            margin-top: 25px;
+            margin-right: 0;
+          }
+
+
+          &:hover {
+            transform: rotate(-360deg);
+            transition: 0.5s;
+          }
+        }
+      }
+  
+      &__refresh {
+        @media ($tablet_s) {
+          display: none;
+        }
+        
+        &-image {
+          margin: 0 25px 0 15px;
+          cursor: pointer;
+  
+        }
+      }
+  
+      &__play{
+        margin-top: 2px;
+      }
+    }
+  
+}
+// ------------------ Tracking button play start
+.playPauseButton {
+position: relative;
+margin: 12px 15px 16px 0;
+/* the button's background color */
+background: #fff; 
+border: none;
+outline:none;
+height: 2.5em;
+width: 2.5em;
+font-size: 2em; 
+box-shadow: 0px 3px 30px rgba(106, 141, 218, 0.5);
+cursor:pointer;
+    /* the button's a circle */ 
+    -moz-border-radius: 5em;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+
+  @media ($tablet_s) {
+    margin: 25px 15px 0 10px;
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  @media ($mobile) {
+    margin: 12px 7px 0 10px;
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+}
+
+.playPauseButton:hover {
+box-shadow: 0px 10px 45px rgba(202, 156, 203, 0.99);
+}
+
+// #playPauseButton:focus {
+// outline:none;
+// }
+
+/* the button's top layer: size, shape, appearance */
+.playPauseButton:before {
+content: "";
+position: absolute;
+top: .5em;
+    /* for visual centering */
+left: .57em;
+height: 0;
+border-style: solid;
+border-width: 0.75em 0 0.75em 1.4em;
+/* create shape with color */
+border-color: transparent transparent transparent #4293f2; 
+transition: .218s ease;
+
+@media ($tablet_s) {
+  left: .37em;
+  top: .37em;
+  border-width: 0.37em 0 0.37em .8em;
+}
+}
+
+.playPauseButton.activePlay:before {
+height: 1.5em;
+border-width: 0 0 0 1.3em;
+@media ($tablet_s) {
+  height: 0.75em;
+  border-width: 0 0 0 0.75em;
+}
+}
+
+/* the button's mouseover/click/hover layer: size, shape, appearance */
+.playPauseButton:after {
+content: "";
+position: absolute;
+background: inherit;
+width: 0;
+height: 1.65em;
+top: .45em;
+    /* for visual centering */
+left: .98em;
+transition: .218s ease;
+
+@media ($tablet_s) {
+  top: .35em;
+  left: .61em;
+  height: 0.85em;
+}
+}
+
+.playPauseButton.activePlay:after {
+width: .5em;
+@media ($tablet_s) {
+  width: .28em;
+}
+}
+// ------------------ Tracking button play end
+
+
+
+// ------------------ Tracking button refresh start
+.tracking-right__refresh-image {
+width: 48px;
+height: 48px;
+transition: none;
+}
+.tracking-right__refresh-image:hover  {
+  transform: rotate(0deg) scale(1.2);
+}
+.tracking-right__refresh-image.activeRefresh {
+transition: all 0.5s ease-in-out;
+transform: rotate(360deg) scale(1.2);
+}
+// ------------------ Tracking button refresh end

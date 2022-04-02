@@ -1,0 +1,209 @@
+@import "../app/vars";
+
+.button-add {
+  display: flex;
+  justify-content: center;
+  max-width: 768px;
+  height: 110px;
+  background-color: lighten($color: #4293f2, $amount: 20%);
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0 20px 40px 20px;
+
+  @media ($mobile) {
+    margin: 0 15px 20px 15px;
+    height: 76px;
+    border-radius: 20px;
+  }
+
+  // ccs hover use all elements class
+  &:hover {
+    background-color: darken($color: #4293f2, $amount: 20%);
+
+    & > * {
+      background-color: darken($color: #4293f2, $amount: 20%);
+    }
+  }
+  
+  &__image {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 55px;
+      transform: translate(-50%, -50%);
+      background: #efffff;
+      height: 50%;
+      width: 7px;
+
+      @media ($mobile) {
+        top: 37px;
+        left: 25px;
+      }
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      height: 7px;
+      width: 50%;
+      background: #efffff;
+      top: 55px;
+      left: 55px;
+
+      @media ($mobile) {
+        top: 37px;
+        left: 25px;
+      }
+    }
+  }
+  
+  &__button {
+    color: #efffff;
+    font-size: 30px;
+    border: #efffff;
+    background-color: lighten($color: #4293f2, $amount: 20%);
+    cursor: pointer;
+    margin-left: 20px;
+    
+    @media ($mobile) {
+      margin-left: -20px;
+      font-size: 20px;
+    }
+  }
+}
+
+
+.field {
+  hr {
+    background-color: #5facff;
+    height: 3px;
+    border: none;
+    margin-top: 20px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 30px 20px;
+  }
+
+  
+  &-form {
+
+    &__title {
+      margin-top: 35px;
+      margin-bottom: 15px;
+      color: #efffff;
+      font-size: 30px;
+      cursor: default;
+  
+      @media ($mobile) {
+        font-size: 23px;
+      }
+    }
+    
+    &__input-title {
+      width: 100%;
+      background-color: #4293f2;
+      font-size: 32px;
+      border-color: #5facff;
+      color: lighten(#4293f2, 25%);
+      outline: 0;
+      border-width: 0 0 3px;
+
+      @media ($mobile) {
+        font-size: 18px;
+      }
+      
+      &::placeholder{
+        color: lighten(#4293f2, 15%);
+      }
+    }
+
+    &__input {
+      display: flex;
+      &-time {
+        margin-right: 30px;
+        width: 100%;
+        background-color: #4293f2;
+        font-size: 32px;
+        border-color: #5facff;
+        color: lighten(#4293f2, 25%);
+        outline: 0;
+        border-width: 0 0 3px;
+        text-align: center;
+
+        &:nth-child(3) {
+          margin-right: 0px;
+        }
+
+        @media ($mobile) {
+          font-size: 18px;
+        }
+        
+        &::placeholder{
+          text-align: center;
+          color: lighten(#4293f2, 15%);
+        }
+      }
+    }
+  }
+
+  &-delete {
+    margin: 50px auto;
+    display: inherit;
+    cursor: pointer;
+
+    &:hover img {
+      transform: scale(1.2);
+      transition: 0.5s;
+    }
+    
+    &__image {
+      margin-right: 15px;
+
+      @media ($mobile) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__title {
+      display: flex;
+      color: #efffff;
+      font-size: 32px;
+      margin: auto 0;
+
+      @media ($mobile) {
+        font-size: 23px;
+      }
+    }
+
+  }
+}
+
+
+.add-notification {
+  // position: sticky;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  color: #efffff;
+  background-color: rgb(240, 52, 52);
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
+  padding: 5px 0;
+  cursor: default;
+
+  @media screen {
+    font-size: 23px;
+  }
+
+}

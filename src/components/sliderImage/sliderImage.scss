@@ -1,0 +1,67 @@
+@import "../app/vars";
+
+.sliderImage {
+    margin-top: 50px;
+
+    // background-color: rgb(224, 219, 219);
+
+    &-title {
+      margin-bottom: 15px;
+      color: #efffff;
+      font-size: 30px;
+      cursor: default;
+    }
+
+    &-image {
+        display: flex;
+        overflow: auto;
+        height: 120px;
+
+        &::-webkit-scrollbar { // hidden scroll bar
+            // display: none;
+            color: aqua;
+
+
+            &-thumb:hover {
+                // background: #0c60c1; 
+                background: linear-gradient(45deg, #3a79c0 0%, #9b1760 99%); 
+            }
+
+            &-thumb {
+                // background: #3a79c0; 
+                background: linear-gradient(45deg, #fc97b6 0%, #7da3e7 99%); 
+                border-radius: 10px;
+            }
+
+            &-track {
+                // background: #5facff; 
+                background: lighten($color: #4293f2, $amount: 20%); 
+                border-radius: 10px;
+            }
+        }
+        
+        &__icon {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            margin: 0 25px;
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                width: 100px;
+                height: 100px;
+                margin: 0 10px;
+            }
+        }
+
+        .sliderImage-image__icon.activeImage {
+            transition: 0.8s;
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            border-radius: 20px;
+            background-color: #0c60c1;
+        }
+    }
+}
