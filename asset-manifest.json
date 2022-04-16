@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/My_app_2---tracking-time---react-html-scss/build/static/css/main.67e44423.css",
+    "main.js": "/My_app_2---tracking-time---react-html-scss/build/static/js/main.b9b0a6ac.js",
+    "static/js/787.247b8124.chunk.js": "/My_app_2---tracking-time---react-html-scss/build/static/js/787.247b8124.chunk.js",
+    "static/media/communication.png": "/My_app_2---tracking-time---react-html-scss/build/static/media/communication.cb846f7085181ae382b9.png",
+    "static/media/book.png": "/My_app_2---tracking-time---react-html-scss/build/static/media/book.95e127aad90a78286f07.png",
+    "static/media/pet.png": "/My_app_2---tracking-time---react-html-scss/build/static/media/pet.570eff7e403c6c139598.png",
+    "static/media/phone.png": "/My_app_2---tracking-time---react-html-scss/build/static/media/phone.d8490aa9811789f73188.png",
+    "index.html": "/My_app_2---tracking-time---react-html-scss/build/index.html",
+    "main.67e44423.css.map": "/My_app_2---tracking-time---react-html-scss/build/static/css/main.67e44423.css.map",
+    "main.b9b0a6ac.js.map": "/My_app_2---tracking-time---react-html-scss/build/static/js/main.b9b0a6ac.js.map",
+    "787.247b8124.chunk.js.map": "/My_app_2---tracking-time---react-html-scss/build/static/js/787.247b8124.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67e44423.css",
+    "static/js/main.b9b0a6ac.js"
+  ]
+}
